@@ -72,7 +72,12 @@ public class BancoTest {
 	
 	@Test
 	public void queAlDepositar1000EnUnaCuentaCorrienteConSaldoIgualACeroSuSaldoFinalSea1000() {
-		
+		//preparacion
+		CuentaCorriente nuevaCuentaCorriente = new CuentaCorriente(0);
+		//ejecucion
+		nuevaCuentaCorriente.depositar(1000);
+		//verificacion
+		assertEquals(1000,nuevaCuentaCorriente.getSaldo());
 	}
 
 }
